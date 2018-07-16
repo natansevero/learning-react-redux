@@ -1,9 +1,10 @@
 /*
-   createStore: Serve para criar o store
-   combineReducers: Combina todos os reducers. Cada reducer apontando para uma propriedade
-   do objeto de Store. No fim, ele gera um objeto que será o Store. (Reducers combinados geram o store)   
-   
-   Provider: Consegue pegar o estado e passar para o componentes
+    createStore: Serve para criar o store
+    combineReducers: Combina todos os reducers. Cada reducer apontando para uma propriedade
+    do objeto de Store. No fim, ele gera um objeto que será o Store. (Reducers combinados geram o store)   
+    
+    Provider: Consegue pegar o estado e passar para o componentes filhos (Pois todo aplicação tá em 
+    dentro da Tag Provider)
 */
 
 import React from 'react'
@@ -20,7 +21,7 @@ const reducers = combineReducers({
 
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
-        <Field initialValue="teste" />
+        <Field />
     </Provider>,
     app
 )
